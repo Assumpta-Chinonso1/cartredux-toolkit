@@ -58,7 +58,7 @@ const Cart = () => {
                   onClick={() => dispatch(removeItem(item.id))}
                   className="p-1 text-sm bg-red-500 text-white rounded hover:bg-red-600">
                 
-                  <FaMinus />
+                  <FaMinus/>
                 </button>
               </div>
             </li>
