@@ -39,8 +39,8 @@ const Cart = () => {
           {items.map((item) => (
             <li
               key={item.id}
-              className="flex justify-between items-center p-3 bg-white border border-gray-200 rounded-md dark:bg-gray-700 dark:border-gray-600"
-            >
+              className="flex justify-between items-center p-3 bg-white border border-gray-200 rounded-md dark:bg-gray-700 dark:border-gray-600">
+            
               <div className="flex-grow">
                 <p className="font-semibold text-lg">{item.name}</p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
