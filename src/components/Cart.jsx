@@ -26,14 +26,14 @@ const Cart = () => {
       {/* ---  Add Button --- */}
       <button
         onClick={() => dispatch(addToCart(demoItem))}
-        className="mb-6 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-150"
+        className="mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-150"
       >
          Add Item
       </button>
 
       {/* --- Cart Items List --- */}
       {items.length === 0 ? (
-        <p className="text-xl text-gray-500 dark:text-gray-400">Your cart is empty.</p>
+        <p className="text-xl text-gray-500 dark:text-white">Your cart is empty.</p>
       ) : (
         <ul className="space-y-4">
           {items.map((item) => (
