@@ -50,8 +50,8 @@ const Cart = () => {
               <div className="flex space-x-2">
                 <button
                   onClick={() => dispatch(addToCart(item))}
-                  className="p-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
-                >
+                  className="p-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">
+                
                   <FaPlus />
                 </button>
                 <button
