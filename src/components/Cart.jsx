@@ -26,8 +26,8 @@ const Cart = () => {
       {/* ---  Add Button --- */}
       <button
         onClick={() => dispatch(addToCart(demoItem))}
-        className="mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-150"
-      >
+        className="mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-150">
+     
          Add Item
       </button>
 
