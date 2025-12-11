@@ -31,7 +31,7 @@ function App() {
           </header>
 
           <div className="container mx-auto px-4 mt-6">
-            <Cart />
+            <Cart/>
             <DashBoard />
           </div>
         </>
