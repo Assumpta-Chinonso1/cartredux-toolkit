@@ -84,9 +84,8 @@ const Login = () => {
       <button
         onClick={handleLogin}
         className="w-full bg-blue-600 text-white p-2 rounded disabled:bg-blue-300"
-        disabled={loading}
-     
-        {loading ? "Logging in..." : "Login"} >
+        disabled={loading} >
+        {loading ? "Logging in..." : "Login"}
       </button>
     </div>
   );
