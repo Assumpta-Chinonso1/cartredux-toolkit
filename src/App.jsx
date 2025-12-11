@@ -10,21 +10,17 @@ function App() {
 
   return (
     <div
-      className={`
-        min-h-screen transition-colors duration-300
-        ${currentMode === "dark" ? "dark bg-gray-900 text-white" : "bg-white text-black"}
-      `}
+      className={`min-h-screen transition-colors duration-300 ${
+        currentMode === "dark"
+          ? "dark bg-gray-900 text-white"
+          : "bg-white text-black"
+      }`}
     >
-      {/* Show login first */}
       {!isAuthenticated && <Login />}
 
-      {/* Show app only after login */}
       {isAuthenticated && (
         <>
-       
           <header className="p-4 shadow-md dark:bg-gray-800 flex justify-between items-center">
-            
-        
             <div>
               <h1 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                 Welcome, {user?.userName}! 👋
@@ -32,16 +28,12 @@ function App() {
               <p className="text-sm opacity-70">Good to have you back</p>
             </div>
 
-            {/* RIGHT SIDE: THEME TOGGLE */}
             <ThemeToggle />
           </header>
 
-          {/* SECTION TITLE: CART */}
           <div className="container mx-auto px-4 mt-6">
-          
-             <Cart />
+            <Cart />
             <DashBoard />
-           
           </div>
         </>
       )}
@@ -50,3 +42,4 @@ function App() {
 }
 
 export default App;
+

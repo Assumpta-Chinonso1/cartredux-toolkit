@@ -1,39 +1,58 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-    user: null,
-    isAuthenticated: false,
-    loading: false,
-    error: null,
-    
-}
 
+// Read saved user from localStorage (if any)
+const savedUser = JSON.parse(localStorage.getItem("user"))
+
+// The default data in our auth state
+const initialState = {
+  //  user: null,              
+    user: savedUser || null,
+    isAuthenticated: savedUser ? true : false,  
+    loading: false,         
+    error: null              
+};
+
+// 2 Creating the auth slice
 const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        loginStart: (state) => {
-            state.loading = true
-            state.error = null
-        },
-        loginSuccess: (state, action ) => {
-            state.loading = false
-            state.user =  action.payload
-            state.isAuthenticated = true   
-            state.error = null
-        },
-        loginFaluire: (state, action) => {
-            state.loading = false
-            state.error = action.payload
-            state.isAuthenticated = false
 
+        // When login starts
+        loginStart: (state) => {
+            state.loading = true;
+            state.error = null;
         },
-        loginOut: (state) => {
-            state.user = null
-            state.isAuthenticated = false
+
+        // When login is successful
+        loginSuccess: (state, action) => {
+            state.loading = false;
+            state.user = action.payload;
+            state.isAuthenticated = true;
+            state.error = null;
+
+            localStorage.setItem("user", JSON.stringify((action.payload)))
+        },
+
+        // When login fails
+        loginFailure: (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+            state.isAuthenticated = false;
+        },
+
+        // Logout user
+        logout: (state) => {
+            state.user = null;
+            state.isAuthenticated = false;
+            state.loading = false;
+            state.error = null;
+            
+            localStorage.removeItem("user")
         }
     }
-})
+});
 
-export const {loginStart, loginSuccess, loginFaluire, loginOut} = authSlice.actions
-export const authReducer = authSlice.reducer
+export const { loginStart, loginSuccess, loginFailure, logout } = authSlice.actions;
+export const authReducer = authSlice.reducer;
