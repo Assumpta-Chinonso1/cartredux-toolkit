@@ -63,7 +63,7 @@ const Login = () => {
         className="border p-2 w-full rounded mb-3 dark:bg-gray-700 dark:text-white"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-      />
+ />
 
       {/* EMAIL INPUT */}
       <input
