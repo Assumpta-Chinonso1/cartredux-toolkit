@@ -79,9 +79,8 @@ const Login = () => {
         placeholder="Password (1234)"
         className="border p-2 w-full rounded mb-3 dark:bg-gray-700 dark:text-white"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)} />
       />
-
       <button
         onClick={handleLogin}
         className="w-full bg-blue-600 text-white p-2 rounded disabled:bg-blue-300"
