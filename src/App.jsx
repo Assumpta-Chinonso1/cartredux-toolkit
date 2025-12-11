@@ -27,7 +27,7 @@ function App() {
               <p className="text-sm opacity-70">Good to have you back</p>
             </div>
 
-            <ThemeToggle />
+            <ThemeToggle/>
           </header>
 
           <div className="container mx-auto px-4 mt-6">
