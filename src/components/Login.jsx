@@ -70,8 +70,8 @@ const Login = () => {
         placeholder="Enter email"
         className="border p-2 w-full rounded mb-3 dark:bg-gray-700 dark:text-white"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        onChange={(e) => setEmail(e.target.value)} />
+     
 
       {/* PASSWORD INPUT */}
       <input
