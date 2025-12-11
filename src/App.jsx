@@ -32,7 +32,7 @@ function App() {
 
           <div className="container mx-auto px-4 mt-6">
             <Cart/>
-            <DashBoard />
+            <DashBoard/>
           </div>
         </>
       )}
