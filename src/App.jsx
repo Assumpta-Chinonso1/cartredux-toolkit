@@ -14,8 +14,7 @@ function App() {
         currentMode === "dark"
           ? "dark bg-gray-900 text-white"
           : "bg-white text-black"
-      }`}
-    >
+      }`}>
       {!isAuthenticated && <Login />}
 
       {isAuthenticated && (
