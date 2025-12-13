@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 // Read saved user
-const savedUser = JSON.parse(localStorage.getItem("user"))
+  const savedUser = JSON.parse(localStorage.getItem("user"))
 
 
 const initialState = {
