@@ -22,7 +22,7 @@ function App() {
           <header className="p-4 shadow-md dark:bg-gray-800 flex justify-between items-center">
             <div>
               <h1 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                Welcome, {user?.userName}! 👋
+                Welcome, {user ?.userName}! 👋
               </h1>
               <p className="text-sm opacity-70">Good to have you back</p>
             </div>

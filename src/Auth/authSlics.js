@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-// Read saved user from localStorage (if any)
+// Read saved user
 const savedUser = JSON.parse(localStorage.getItem("user"))
 
-// The default data in our auth state
 const initialState = {
-  //  user: null,              
+              
     user: savedUser || null,
     isAuthenticated: savedUser ? true : false,  
     loading: false,         
@@ -32,7 +31,9 @@ const authSlice = createSlice({
             state.isAuthenticated = true;
             state.error = null;
 
-            localStorage.setItem("user", JSON.stringify((action.payload)))
+            localStorage.setItem("user", JSON.stringify(action.payload))
+
+          
         },
 
         // When login fails
@@ -50,6 +51,7 @@ const authSlice = createSlice({
             state.error = null;
             
             localStorage.removeItem("user")
+            
         }
     }
 });
