@@ -40,7 +40,7 @@ const authSlice = createSlice({
          // When login fails
         loginFailure: (state, action) => {
               state.loading = false;
-            state.error = action.payload;
+              state.error = action.payload;
             state.isAuthenticated = false;
         },
 
