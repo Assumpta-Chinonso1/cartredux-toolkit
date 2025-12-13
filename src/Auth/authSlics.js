@@ -22,7 +22,7 @@ const authSlice = createSlice({
         // When login starts
         loginStart: (state) => {
             state.loading = true;
-            state.error = null;
+             state.error = null;
         },
 
         // When login is successful
