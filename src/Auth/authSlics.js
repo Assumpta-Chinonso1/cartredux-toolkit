@@ -37,7 +37,7 @@ const authSlice = createSlice({
           
         },
 
-        // When login fails
+         // When login fails
         loginFailure: (state, action) => {
             state.loading = false;
             state.error = action.payload;
